@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quadcopter Web Control</title>
+</head>
+
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+
+<script type="text/javascript">
+
+<!--
+
+(function($) {
+function qc_cmd(cmd) {
+       $.ajax({
+        type: 'GET',
+	url: 'cmd.py?cmd='+cmd,
+	//data: { val: "Hello World" },
+        dataType: 'html',
+       success: function(html,textStatus) {
+	//$('body').append(html);
+        //$('div#info').text('The page has been successfully loaded');
+        $('div#info').html(html);
+       },
+       error: function(xhr,textStatus,errorThrown) {
+       alert('An error occurred! '+ (errorThrown ? errorThrown : xhr.status ));
+       } 
+       });
+}
+
+$(document).ready(function(){
+
+    $('button#cmdUP').click(function(){
+       event.preventDefault();
+       //alert('oops');
+       qc_cmd("UP");
+    });
+    $('button#cmdDOWN').click(function(){
+       qc_cmd("DOWN");
+    });
+    $('button#cmdLEFT').click(function(){
+       qc_cmd("LEFT");
+    });
+    $('button#cmdRIGHT').click(function(){
+       qc_cmd("RIGHT");
+    });
+    $('button#cmdFORWARD').click(function(){
+       qc_cmd("FORWARD");
+    });
+    $('button#cmdBACKWARD').click(function(){
+       qc_cmd("BACKWARD");
+    });
+    $('button#cmdSTOP').click(function(){
+       qc_cmd("STOP");
+    });
+
+    /* Special Controls */
+
+    $('button#cmdINCM1').click(function(){
+       qc_cmd("INCM1");
+    });
+    $('button#cmdINCM2').click(function(){
+       qc_cmd("INCM2");
+    });
+    $('button#cmdINCM3').click(function(){
+       qc_cmd("INCM3");
+    });
+    $('button#cmdINCM4').click(function(){
+       qc_cmd("INCM4");
+    });
+    $('button#cmdDECM1').click(function(){
+       qc_cmd("DECM1");
+    });
+    $('button#cmdDECM2').click(function(){
+       qc_cmd("DECM2");
+    });
+    $('button#cmdDECM3').click(function(){
+       qc_cmd("DECM3");
+    });
+    $('button#cmdDECM4').click(function(){
+       qc_cmd("DECM4");
+    });
+
+});
+})(jQuery);
+
+
+//-->
+
+</script>
+
+<body>
+
+<center>
+
+<div id="cam">
+    <center>
+      Quadcopter Camera
+      <br/>
+      <img src="http://192.168.3.20:9000/?action=stream" />
+    </center>
+</div>
+<br/>
+
+<div id="info">
+[M1] [0-100] RPM: 0<br/>
+[M2] [0-100] RPM: 0<br/>
+[M3] [0-100] RPM: 0<br/>
+[M4] [0-100] RPM: 0<br/>
+</div>
+
+<br/><br/>
+
+<button id="cmdUP"> UP </button>
+<br/><br/>
+<button id="cmdDOWN"> DOWN </button>
+<br/><br/><br/>
+
+<table>
+<tr>
+<td colspan=3>
+<center>
+<button id="cmdFORWARD"> FORWARD </button>
+</center>
+</td>
+</tr>
+<tr>
+<td>
+<button id="cmdLEFT"> LEFT </button>
+</td>
+<td width=100>
+</td>
+<td>
+<button id="cmdRIGHT"> RIGHT </button>
+</td>
+</tr>
+<tr>
+<td colspan=3>
+<center>
+<button id="cmdBACKWARD"> BACKWARD </button>
+</center>
+</td>
+</tr>
+</table>
+<br/><br/>
+<button id="cmdSTOP"> STOP </button>
+<br/><br/>
+<button id="cmdINCM1"> INCM1 </button>
+<button id="cmdINCM2"> INCM2 </button>
+<button id="cmdINCM3"> INCM3 </button>
+<button id="cmdINCM4"> INCM4 </button>
+<br><br>
+<button id="cmdDECM1"> DECM1 </button>
+<button id="cmdDECM2"> DECM2 </button>
+<button id="cmdDECM3"> DECM3 </button>
+<button id="cmdDECM4"> DECM4 </button>
+
+<!--
+<form name="control" id="control" onsubmit="return false">
+<input type="button" id="cmdUP" value="UP" onclick="qc_cmd('UP');">
+<input type="button" id="cmdDOWN" value="DOWN" onclick="qc_cmd('DOWN');">
+<input type="button" id="cmdLEFT" value="LEFT" onclick="qc_cmd('LEFT');">
+<input type="button" id="cmdRIGHT" value="RIGHT" onclick="qc_cmd('RIGHT');">
+</form>
+-->
+
+</center>
+
+</body>
+</html>

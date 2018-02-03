@@ -1,0 +1,6 @@
+1.1 Some code additions 
+    Change Stop Motors for smooth landing
+    Add Web Password 
+    Add the core Sensor code
+
+1.0 First Release

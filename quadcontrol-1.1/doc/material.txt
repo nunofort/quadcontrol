@@ -1,0 +1,59 @@
+Requirements
+=============
+
+- Raspberry pi b, b+
+- +8G SD card (with debian image)
+- Raspberry pi camera
+- wifi usb adapter (with AP mode support) 
+- Set PI as an Wireless Access point  
+- Get Jumper wires
+- MPU6050 sensor board (optional) from amazon or ebay 
+
+==========================================
+Quadcopter Example material
+==========================================
+
+Turnigy Talon Quadcopter (V2.0) Carbon Fiber Frame 550mm
+http://www.hobbyking.com/hobbyking/store/uh_viewItem.asp?idProduct=22781
+
+28-26A 1200kv/215w at 12v
+4x
+http://www.hobbyking.com/hobbyking/store/uh_viewItem.asp?idProduct=17345
+
+TURNIGY Plush 25amp Speed Controller
+4x
+http://www.hobbyking.com/hobbyking/store/uh_viewItem.asp?idProduct=2163
+
+NTM Prop Drive 28 Series
+4x
+http://www.hobbyking.com/hobbyking/store/uh_viewItem.asp?idProduct=16719
+
+10CM Male to Male Servo Lead (JR) 
+http://www.hobbyking.com/hobbyking/store/uh_viewItem.asp?idProduct=21758
+
+
+Slow Fly Electric Prop 8045R SF (CW)
+4x
+http://www.hobbyking.com/hobbyking/store/uh_viewItem.asp?idProduct=22439
+
+NOTE: you need 2 props to rotate clockwise(CW-R) and 2 counter clockwise (CCW-L) at least
+      Should by some spares for each type
+      Connect 2 opposite motors to ESCs (CW-R) yellow and red connectors in one way
+      Connect 2 opposite motors to ESCs (CCW-L) yellow and red connect in another way
+      to invert the motor rotation
+
+You can get these materials with other specs for more powerfull quadcopter.
+(as an example, big alluminum home made frame with powerfull motors)
+
+For the battery you can get one 3S from 11.1V with at least 5000mAh, for testing.
+It is recommended a 4S battery for more time to play with.
+
+Optionally and recommended, add one separate battery bank for the PI.
+
+
+
+
+
+
+ 
+
