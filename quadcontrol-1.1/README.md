@@ -8,6 +8,11 @@ An application to control remotely a Quadcopter throught a Raspberry Pi. The goa
 This feature is allready working using a python Webserver and streaming video from Raspberry Camera, through mjpg-streamer.
 You can play also without camera support from command line python script.
 
+Examples
+========
+
+![IMAGE](https://hub.com/nunofort/quadcontrol/blob/master/quadcontrol_shot.jpeg)
+
 Requirements
 =============
 
