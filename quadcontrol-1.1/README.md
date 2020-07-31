@@ -11,7 +11,7 @@ You can play also without camera support from command line python script.
 Examples
 ========
 
-![IMAGE](https://hub.com/nunofort/quadcontrol/blob/master/quadcontrol_shot.jpeg)
+![IMAGE](quadcontrol_shot.jpeg)
 
 Requirements
 =============
